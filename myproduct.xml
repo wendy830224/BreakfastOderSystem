@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Data>
+  <!--
+    這裡是定義使用者的購買紀錄
+-->
+  <User UserName="111111" Phone="222222" Date="2021/7/7">
+    <Detail Item="綠茶" Quantity="2" />
+    <Detail Item="綠茶" Quantity="4" />
+  </User>
+  <User UserName="2222" Phone="22222" Date="2021/7/8">
+    <Detail Item="紅茶" Quantity="2" />
+    <Detail Item="奶茶" Quantity="3" />
+  </User>
+  <User UserName="2222" Phone="1111" Date="2021/7/8">
+    <Detail Item="綠茶" Quantity="3" />
+    <Detail Item="紅茶" Quantity="2" />
+  </User>
+  <User UserName="11" Phone="11" Date="2021/7/8">
+    <Detail Item="綠茶" Quantity="5" />
+    <Detail Item="奶茶" Quantity="2" />
+  </User>
+  <User UserName="1111111111111111111" Phone="11111111111111111111" Date="2021/7/8">
+    <Detail Item="綠茶" Quantity="3" />
+    <Detail Item="紅茶" Quantity="3" />
+  </User>
+  <User UserName="1" Phone="22" Date="2021/7/8">
+    <Detail Item="綠茶" Quantity="3" />
+    <Detail Item="紅茶" Quantity="1" />
+  </User>
+  <User UserName="1" Phone="11" Date="2021/7/8">
+    <Detail Item="綠茶" Quantity="2" />
+    <Detail Item="紅茶" Quantity="3" />
+  </User>
+  <User UserName="apple" Phone="" Date="2021/7/8">
+    <Detail Item="綠茶" Quantity="3" />
+  </User>
+  <User UserName="11" Phone="55" Date="2021/7/8">
+    <Detail Item="綠茶" Quantity="2" />
+  </User>
+  <User UserName="2" Phone="200" Date="2021/7/8">
+    <Detail Item="綠茶" Quantity="2" />
+  </User>
+  <User UserName="3" Phone="44" Date="2021/7/8">
+    <Detail Item="綠茶" Quantity="2" />
+    <Detail Item="紅茶" Quantity="1" />
+  </User>
+  <User UserName="1" Phone="1" Date="2021/7/8">
+    <Detail Item="綠茶" Quantity="4" />
+  </User>
+  <User UserName="apple" Phone="111" Date="2021/7/9">
+    <Detail Item="綠茶" Quantity="5" />
+    <Detail Item="奶茶" Quantity="1" />
+  </User>
+  <User UserName="44" Phone="3333" Date="2021/7/9">
+    <Detail Item="綠茶" Quantity="3" />
+    <Detail Item="紅茶" Quantity="1" />
+    <Detail Item="奶茶" Quantity="3" />
+  </User>
+  <User UserName="3333" Phone="3333333" Date="2021/7/9">
+    <Detail Item="綠茶" Quantity="5" />
+    <Detail Item="紅茶" Quantity="2" />
+  </User>
+  <User UserName="222" Phone="33333333" Date="2021/7/9">
+    <Detail Item="綠茶" Quantity="1" />
+    <Detail Item="紅茶" Quantity="1" />
+  </User>
+  <User UserName="22" Phone="222" Date="2021/7/9">
+    <Detail Item="紅茶" Quantity="2" />
+  </User>
+  <User UserName="" Phone="" Date="2021/7/9">
+    <Detail Item="綠茶" Quantity="3" />
+    <Detail Item="紅茶" Quantity="3" />
+  </User>
+  <User UserName="222" Phone="222222" Date="2021/7/10">
+    <Detail Item="綠茶" Quantity="3" />
+    <Detail Item="紅茶" Quantity="3" />
+  </User>
+  <User UserName="222" Phone="22" Date="2021/7/10">
+    <Detail Item="綠茶" Quantity="2" />
+    <Detail Item="紅茶" Quantity="4" />
+    <Detail Item="奶茶" Quantity="4" />
+  </User>
+  <User UserName="" Phone="" Date="2021/7/11">
+    <Detail Item="綠茶" Quantity="3" />
+  </User>
+  <User UserName="1" Phone="111111" Date="2021/7/11">
+    <Detail Item="綠茶" Quantity="5" />
+    <Detail Item="奶茶" Quantity="2" />
+  </User>
+</Data>
