@@ -312,13 +312,5 @@ var text;
 
         alert(飲料尚未點選完成);
     }
- 
-
-
-    </script>
-
-
-
-    
 
 </script>
