@@ -26,7 +26,7 @@
         xesub1.SetAttribute("Date", today) '設定該節點Date屬性
 
         'Detail項目
-        If Content <> "0" then
+        If Content <> "" then
             Dim array1 = Split(Content, ",")
             For j = 0 To array1.length - 1
                 Dim array2 = Split(array1(j), "@")

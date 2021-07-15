@@ -88,15 +88,19 @@
 
 <br>
 
-    <button  type="button" class="button" onclick="buttonFunction()" style="background-color: rgb(245, 236, 112);width: 100px;
-    height:45px;color: rgb(92, 22, 10);font-family:Microsoft JhengHei;">總額</button>
+    
     
 <form action="vbtest_back.aspx" method="GET">
 <input name="UserName" placeholder="名字">
 <input name="Phone" placeholder="電話">
 <input name="Add" value="1" style="display:none">
 <input name="Content" id="contentid" vlaue="" style="display:none">
-<button type="submit">送出</button>
+<button type="submit" id="submitid" style="display:none">送出</button>
+
+<button  type="button" class="button" onclick="buttonFunction()" style="background-color: rgb(245, 236, 112);width: 100px;
+    height:45px;color: rgb(92, 22, 10);font-family:Microsoft JhengHei;">送出</button>
+
+
 <input name="money" id="moneyid" value="" style="display:none">
 </form>
 
@@ -283,15 +287,19 @@ var text;
 
         text=co1 + co2 + co3 + co4;
 
-        document.getElementById("contentid").value=text;
         
+        document.getElementById("contentid").value=text;
      
         money = money1 + money2 + money3 + money4;
+
         document.getElementById("moneyid").value=money;
 
 
         
-        alert(text);
+      document.getElementById("submitid").click();
+                
+    }
+
         
         //alert(document.getElementById("contentid1").value);
         //alert(text);
@@ -300,7 +308,7 @@ var text;
         co3="";
         co4="";
         text="";
-    }
+    
  
         if("addok" == "<%= request("status") %>")
     {
@@ -308,9 +316,13 @@ var text;
         alert('已完成訂單，總額:' + "<%= request("money") %>");
         //'已完成訂單，總額:'
         }
-        else{
-
-        alert(飲料尚未點選完成);
+       
+        if("error" == "<%= request("status") %>")
+    {
+        alert('飲料尚未點選完成');
     }
+
+
+  
 
 </script>
