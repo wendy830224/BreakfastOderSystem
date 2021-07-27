@@ -38,10 +38,15 @@
                 xesub2.SetAttribute("Quantity", array2(1))
                 xesub1.AppendChild(xesub2) '新增到<Data>節點中
 
-
             Next
+
+            root.AppendChild(xesub1) '新增到<Data>節點中 
+            xmlDoc.Save(xmlFileName)   
+            Response.Write("ok")
+
         Elseif  Content="" then
-            Response.Redirect("20210626home.aspx?status=error")
+            'Response.Redirect("20210626home.aspx?status=error")
+            Response.Write("error")
         End If
 
 
@@ -52,9 +57,8 @@
         ' xesub1.AppendChild(xesub2) '新增到<Data>節點中 
 
 
-        root.AppendChild(xesub1) '新增到<Data>節點中 
-        xmlDoc.Save(xmlFileName)   
-        Response.Redirect("20210626home.aspx?status=addok&money=" & money)  '跳回前端  & = +
+        
+        'Response.Redirect("20210626home.aspx?status=addok&money=" & money)  '跳回前端  & = +
     End If
 
 
@@ -69,5 +73,102 @@
             End if
             
         Next
+    End If
+
+
+    '查詢總訂單人數
+    '------------------------------------------------
+    If Request("status") = "all" Then
+        'Response.Write("123")
+        Dim root As XmlElement = xmlDoc.DocumentElement
+        Dim nodeList as XmlNodeList = root.SelectNodes("User")
+        Response.Write(nodeList.count)
+    End If
+
+    '查日期 - 只顯示人名電話
+    '------------------------------------------------
+    If Request("status") = "date" Then
+        Dim root As XmlElement = xmlDoc.DocumentElement
+        Dim nodeList as XmlNodeList = root.SelectNodes("User[@Date='" & Request("date") & "']")
+        for i = 0 to nodeList.count - 1
+
+            Dim node As XmlElement = nodeList(i)
+            Dim UserName as string = node.GetAttribute("UserName")
+            Dim Phone as string = node.GetAttribute("Phone")
+
+            Response.Write("UserName=" & UserName  & " ,Phone=" & Phone & "<br>")
+        next
+    End If
+
+
+    '查日期 - 全部顯示
+    '------------------------------------------------
+    If Request("status") = "date_detail" Then
+        Dim root As XmlElement = xmlDoc.DocumentElement
+        Dim nodeList as XmlNodeList = root.SelectNodes("User[@Date='" & Request("date") & "']")
+        for i = 0 to nodeList.count - 1
+
+            Dim node As XmlElement = nodeList(i)
+            Dim UserName as string = node.GetAttribute("UserName")
+            Dim Phone as string = node.GetAttribute("Phone")
+
+            Dim detailList as XmlNodeList = root.SelectNodes("User[@UserName='" & UserName & "' and @Phone='" & Phone & "']")
+
+
+            Response.Write("UserName=" & UserName  & " ,Phone=" & Phone & "<br>")
+            Response.Write("-----------------------------------------------<br>")
+
+            for j = 0 to detailList.count - 1 '這人可能有重複訂單
+
+                Dim detail As XmlElement = detailList(j) 
+                Dim result as XmlNodeList = detail.GetElementsByTagName("Detail")
+
+
+                for k as integer = 0 to result.count - 1 'Detail 清單
+
+                    Dim thisDetail As XmlElement = result(k)
+                    Dim Item1 as string = thisDetail.GetAttribute("Item")
+                    Dim Quantity1 as string = thisDetail.GetAttribute("Quantity")
+
+                    Response.Write("Item=" & Item1  & " ,Quantity=" & Quantity1 & "<br>")
+                next
+
+            next 
+            Response.Write("-----------------------------------------------<br><br>")
+        next
+    End If
+
+'Dim value1 = "123"
+'"@key='"& value1 &"' and @key2='value2'"
+
+'Dim a = "key='value1'"
+'Dim b = Request("XXX")
+'Dim c = "key2='value2'"
+'Dim d = "key='value1'" & Request("XXX") & "key2='value2'"
+
+'Dim e = "---'" & a & "'----"  &  "######" &  "@@@@@@"
+'Dim e = "---'value'----"  &  "######" &  "@@@@@@"
+
+'查人名 日期- 只顯示電話
+    '------------------------------------------------
+If Request("status") = "ShowPhone" Then
+        Dim root As XmlElement = xmlDoc.DocumentElement
+        Dim nodeList as XmlNodeList = root.SelectNodes("User[@UserName='" & Request("UserName") & "' and  @Date='" & Request("Date") & "']")
+
+        for i = 0 to nodeList.count - 1 
+
+            Dim node As XmlElement = nodeList(i)
+            Dim UserName as string = node.GetAttribute("UserName")
+            Dim Date1 as string = node.GetAttribute("Date")
+            Dim Phone as string = node.GetAttribute("Phone")
+
+             
+
+            Response.Write("Phone=" & Phone  & " ,Date=" & date1 & "<br>")
+
+
+
+        
+        next
     End If
 %>
