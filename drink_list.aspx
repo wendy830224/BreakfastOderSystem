@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="style1.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <img src="img/LOGO.jpg"  width="auto" height="100" >   
 
@@ -22,101 +23,104 @@
     </thead>
     
     <tbody>    
-    <tr>
-        <td><input type="checkbox" id="myCheck1" onclick="myFunction1()"></td><td>綠茶</td>
-        <td>$10</td>
-        <td> <select id="drink1" onchange="drinkfunction1(this);">    <!--按鈕是onclick  選單是onchange-->
-            <option selected="selected" value1="0">請問需要幾杯</option>
-            <option value="10">1</option>
-            <option value="20">2</option>
-            <option value="30">3</option>
-            <option value="40">4</option>
-            <option value="50">5</option>
-        </select></td>
-        <td>
-            <img src="img/綠茶.jpg" alt="這是綠茶" width="auto" height="80">
-        </td>
+        <tr>
+            <td><input type="checkbox" id="myCheck1" onclick="myFunction1()"></td><td>綠茶</td>
+            <td>$10</td>
+            <td> <select id="drink1" onchange="drinkfunction1(this);">    <!--按鈕是onclick  選單是onchange-->
+                    <option selected="selected" value1="0">請問需要幾杯</option>
+                    <option value="10">1</option>
+                    <option value="20">2</option>
+                    <option value="30">3</option>
+                    <option value="40">4</option>
+                    <option value="50">5</option>
+                </select>
+            </td>
+            <td>
+                <img src="img/綠茶.jpg" alt="這是綠茶" width="auto" height="80">
+            </td>
+        </tr>
     
+        <tr>
+            <td><input type="checkbox" id="myCheck2" onclick="myFunction2()"></td><td>紅茶</td>
+            <td>$15</td>
+            <td>
+                <select id="drink2" onchange="drinkfunction2(this);">    <!--按鈕是onclick  選單是onchange-->
+                    <option selected="selected" value="0">請問需要幾杯</option>
+                    <option value="15">1</option>
+                    <option value="30">2</option>
+                    <option value="45">3</option>
+                    <option value="60">4</option>
+                    <option value="75">5</option>
+                </select>
+            </td>
+            <td>
+                <img src="img/紅茶.jpg" alt="這是紅茶" width="auto" height="80">
+            </td>
+        </tr>
 
-    <tr>
-        <td><input type="checkbox" id="myCheck2" onclick="myFunction2()"></td><td>紅茶</td>
-        <td>$15</td>
-        <td><select id="drink2" onchange="drinkfunction2(this);">    <!--按鈕是onclick  選單是onchange-->
-        <option selected="selected" value="0">請問需要幾杯</option>
-        <option value="15">1</option>
-        <option value="30">2</option>
-        <option value="45">3</option>
-        <option value="60">4</option>
-        <option value="75">5</option>
-    </select></td>
-        <td>
-            <img src="img/紅茶.jpg" alt="這是紅茶" width="auto" height="80">
-        </td></tr>
+        <tr>
+            <td><input type="checkbox" id="myCheck3" onclick="myFunction3()"></td><td>奶茶</td>
+            <td>$20</td>
+            <td>
+                <select id="drink3" onchange="drinkfunction3(this);">    <!--按鈕是onclick  選單是onchange-->
+                    <option selected="selected" value="0">請問需要幾杯</option>
+                    <option value="20">1</option>
+                    <option value="40">2</option>
+                    <option value="60">3</option>
+                    <option value="80">4</option>
+                    <option value="100">5</option>
+                </select>
+            </td>
+            <td>
+                <img src="img/奶茶.jpg" alt="這是奶茶" width="auto" height="80">
+            </td>
+        </tr>
 
-    <tr>
-        <td><input type="checkbox" id="myCheck3" onclick="myFunction3()"></td><td>奶茶</td>
-        <td>$20</td>
-        <td><select id="drink3" onchange="drinkfunction3(this);">    <!--按鈕是onclick  選單是onchange-->
-        <option selected="selected" value="0">請問需要幾杯</option>
-        <option value="20">1</option>
-        <option value="40">2</option>
-        <option value="60">3</option>
-        <option value="80">4</option>
-        <option value="100">5</option>
-    </select></td>
-    <td>
-        <img src="img/奶茶.jpg" alt="這是奶茶" width="auto" height="80">
-    </td></tr>
-
-    <tr>
-        <td><input type="checkbox" id="myCheck4" onclick="myFunction4()"></td><td>鮮奶茶</td>
-        <td>$30</td>
-        <td><select id="drink4" onchange="drinkfunction4(this);">    <!--按鈕是onclick  選單是onchange-->
-        <option selected="selected" value="0">請問需要幾杯</option>
-        <option value="30">1</option>
-        <option value="60">2</option>
-        <option value="90">3</option>
-        <option value="120">4</option>
-        <option value="150">5</option>
-    </select></td>
-    <td>
-        <img src="img/鮮奶茶.jpg" alt="這是鮮奶茶" width="auto" height="80">
-    </td></tr></tbody>
-    
-
-    </table>
-
+        <tr>
+            <td><input type="checkbox" id="myCheck4" onclick="myFunction4()"></td><td>鮮奶茶</td>
+            <td>$30</td>
+            <td>
+                <select id="drink4" onchange="drinkfunction4(this);">    <!--按鈕是onclick  選單是onchange-->
+                    <option selected="selected" value="0">請問需要幾杯</option>
+                    <option value="30">1</option>
+                    <option value="60">2</option>
+                    <option value="90">3</option>
+                    <option value="120">4</option>
+                    <option value="150">5</option>
+                </select>
+            </td>
+            <td>
+                <img src="img/鮮奶茶.jpg" alt="這是鮮奶茶" width="auto" height="80">
+            </td>
+        </tr>
+    </tbody>
+</table>
 <br>
 
     
     
 <form action="vbtest_back.aspx" method="GET">
-<input name="UserName" placeholder="名字">
-<input name="Phone" placeholder="電話">
-<input name="Add" value="1" style="display:none">
-<input name="Content" id="contentid" vlaue="" style="display:none">
-<button type="submit" id="submitid" style="display:none">送出</button>
-
-<button  type="button" class="button" onclick="buttonFunction()" style="background-color: rgb(245, 236, 112);width: 100px;
-    height:45px;color: rgb(92, 22, 10);font-family:Microsoft JhengHei;">送出</button>
-
-
-<input name="money" id="moneyid" value="" style="display:none">
+    <input name="UserName" placeholder="名字">
+    <input name="Phone" placeholder="電話">
+    <input name="Add" value="1" style="display:none">
+    <input name="Content" id="contentid" vlaue="" style="display:none">
+    <button type="submit" id="submitid" style="display:none">送出</button>
+    <button  type="button" class="button" onclick="buttonFunction()" style="background-color: rgb(245, 236, 112);width: 100px;height:45px;color: rgb(92, 22, 10);font-family:Microsoft JhengHei;">送出</button>
+    <input name="money" id="moneyid" value="" style="display:none">
 </form>
 
 
 <script>
-
-var money=0;
-var money1=0;
-var money2=0;
-var money3=0;
-var money4=0;
-var c1=0;
-var c2=0;
-var c3=0;
-var c4=0;
-var text;    
+    var money=0;
+    var money1=0;
+    var money2=0;
+    var money3=0;
+    var money4=0;
+    var c1=0;
+    var c2=0;
+    var c3=0;
+    var c4=0;
+    var text;    
 
     function myFunction1() {
         var checkBox = document.getElementById("myCheck1");
@@ -301,25 +305,25 @@ var text;
         
       //document.getElementById("submitid").click();
 
-      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js";
-    $.ajax({
-        url: "vbtest_back.aspx", timeout: 1000, type: "post",
-        data: parameters,
-        success: function (e) {
-            alert(e); 
-            if(e == "ok"){
-                alert('已完成訂單, 總額:' + document.getElementById("moneyid").value);
-            }
-            else if(e == "error"){
-                alert('飲料尚未點選完成');
-            }
 
-        }
-        error: function (xhr, status, error) {
+        $.ajax({
+            url: "vbtest_back.aspx", timeout: 1000, type: "post",
+            data: parameters,
+            success: function (e) {
+                alert(e); 
+                if(e == "ok"){
+                    alert('已完成訂單, 總額:' + document.getElementById("moneyid").value);
+                }
+                else if(e == "error"){
+                    alert('飲料尚未點選完成');
+                }
+
+            },
+            error: function (xhr, status, error) {
                 alert("error"); 
             }
 
-    });
+        });
                 
     
 
@@ -333,18 +337,18 @@ var text;
         text="";    
  
        if("addok" == "<%= request("status") %>")
-    {
-        
-        alert('已完成訂單，總額:' + "<%= request("money") %>");
+        {
+            
+            alert('已完成訂單，總額:' + "<%= request("money") %>");
         //'已完成訂單，總額:'
         }
        
         if("error" == "<%= request("status") %>")
-    {
-        alert('飲料尚未點選完成');
+        {
+            alert('飲料尚未點選完成');
+        }
+
     }
-
-
   
 
 </script>
